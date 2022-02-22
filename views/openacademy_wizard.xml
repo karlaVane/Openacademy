@@ -19,27 +19,16 @@
             </field>
         </record> 
 
-        <act_window id="launch_session_wizard"
-                name="Add Attendees"
-                res_model="openacademy.wizard"
-                binding_model_id="openacademy.wizard"
-                view_mode="form"
-                target="new"
-                />
-                	
-<!--
-key2="client_action_multi"
-    <record id="launch_session_wizard" model="ir.actions.act_window">
-        <field name="name">WIZARD</field>
-        <field name="res_model">openacademy.wizard</field>
-        <field name="view_mode">form</field>
-        <field name="target">new</field>
-        <field name="binding_model_id" ref="openacademy.wizard"/>
-        <field name="client_action_multi">True</field>
-    </record>
+        <record id="launch_session_wizard" model="ir.actions.act_window">
+            <field name="name">WIZARD</field>
+            <field name="res_model">openacademy.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_openacademy_session"/>         
+        </record>
 
-    <menuitem id = "main_wizard_menu" name="wizard"/>
-    <menuitem id="wizard_menu" name="Courses" parent="openacademy.session_list_action" action="launch_session_wizard"/>
-    -->
+       
+        <menuitem id="wizard_menu" name="wizard" parent="openacademy_menu" action="launch_session_wizard"/>
+    
     </data>
 </odoo>
