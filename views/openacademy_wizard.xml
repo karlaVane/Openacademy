@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="openacademy.wizard">
+            <field name="name">wizard.form</field>
+            <field name="model">openacademy.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Add Attendees">
+                    <group>
+                        <field name="session_id"/>
+                        <field name="attendee_ids"/>
+                    </group>
+                    <footer>
+                        <button name="subscribe" type="object"
+                            string="Subscribe" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record> 
+
+        <act_window id="launch_session_wizard"
+                name="Add Attendees"
+                res_model="openacademy.wizard"
+                binding_model_id="openacademy.wizard"
+                view_mode="form"
+                target="new"
+                />
+                	
+<!--
+key2="client_action_multi"
+    <record id="launch_session_wizard" model="ir.actions.act_window">
+        <field name="name">WIZARD</field>
+        <field name="res_model">openacademy.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="openacademy.wizard"/>
+        <field name="client_action_multi">True</field>
+    </record>
+
+    <menuitem id = "main_wizard_menu" name="wizard"/>
+    <menuitem id="wizard_menu" name="Courses" parent="openacademy.session_list_action" action="launch_session_wizard"/>
+    -->
+    </data>
+</odoo>

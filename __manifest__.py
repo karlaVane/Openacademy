@@ -24,16 +24,21 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'demo/demo.xml',
         'views/openacademy.xml',
-        'views/openacademy_session.xml', 
-        'views/partner.xml', 
+        'views/openacademy_session.xml',
+        'views/partner.xml',
+        'views/openacademy_wizard.xml',
+        'reports/reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+
+    #'application': True,
 }
